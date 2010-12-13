@@ -29,7 +29,7 @@ BuildRoot: %{_tmppath}/abiquo-release-root
 %{product_family} release files
 
 %prep
-%setup -q -n abiquo-release-%{builtin_release_version}
+%setup -q 
 %patch -p1
 
 %build
