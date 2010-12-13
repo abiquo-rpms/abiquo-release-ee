@@ -12,7 +12,7 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.7
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -81,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Mon Dec 13 2010 Sergio Rubio <srubio@abiquo.com> - 1.7-2
+- updated to 1.7
+
 * Mon Nov 08 2010 Sergio Rubio <srubio@abiquo.com> 1.6.8-2
 - updated to 1.6.8 Final Release
 
