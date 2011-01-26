@@ -12,13 +12,13 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.7
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
 Patch: centos-release-skip-eula.patch
 
-Obsoletes: rawhide-release redhat-release-as redhat-release-es redhat-release-ws redhat-release-de comps 
+Obsoletes: rawhide-release redhat-release-as redhat-release-es redhat-release-ws redhat-release-de comps abiquo-release
 Obsoletes: rpmdb-redhat redhat-release whitebox-release fedora-release sl-release enterprise-release
 Provides: abiquo-release centos-release redhat-release yumconf
 Requires: abiquo-release-notes
@@ -81,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Wed Jan 26 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-3
+- obsoletes abiquo-release
+
 * Mon Dec 13 2010 Sergio Rubio <srubio@abiquo.com> - 1.7-2
 - updated to 1.7
 
