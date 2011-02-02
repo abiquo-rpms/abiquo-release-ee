@@ -1,4 +1,4 @@
-%define builtin_release_name Preview
+%define builtin_release_name Final 
 %define base_release_version 1.7
 %define builtin_release_variant Enterprise Edition
 %define builtin_release_version %{base_release_version}
@@ -12,7 +12,7 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.7
-Release: 3%{?dist}
+Release: 4%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -81,6 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Wed Feb 02 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-4
+- fixed release strings
+
 * Wed Jan 26 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-3
 - obsoletes abiquo-release
 
