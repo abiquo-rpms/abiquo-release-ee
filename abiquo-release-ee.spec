@@ -12,10 +12,11 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.7.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
+Source1: abiquo-release
 Patch: centos-release-skip-eula.patch
 
 Obsoletes: rawhide-release redhat-release-as redhat-release-es redhat-release-ws redhat-release-de comps abiquo-release
@@ -64,6 +65,8 @@ for file in RPM-GPG-KEY* ; do
         install -m 644 $file $RPM_BUILD_ROOT/etc/pki/rpm-gpg
 done
 
+cp %{SOURCE1} $RPM_BUILD_ROOT/etc/
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -79,9 +82,13 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/eula/eula.*
 %dir /etc/pki/rpm-gpg
 /etc/pki/rpm-gpg/*
+/etc/abiquo-release
 #/var/lib/supportinfo
 
 %changelog
+* Fri Mar 04 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-2
+- added abiquo-release file
+
 * Fri Mar 04 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
 - 1.7.5 preview
 
