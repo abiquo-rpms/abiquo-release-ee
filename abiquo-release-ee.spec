@@ -1,5 +1,5 @@
-%define builtin_release_name Final 
-%define base_release_version 1.7
+%define builtin_release_name PREVIEW 
+%define base_release_version 1.7.5
 %define builtin_release_variant Enterprise Edition
 %define builtin_release_version %{base_release_version}
 %define real_release_version %{?release_version}%{!?release_version:%{builtin_release_version}}
@@ -11,8 +11,8 @@
 Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
-Version: 1.7
-Release: 5%{?dist}
+Version: 1.7.5
+Release: 1%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -82,6 +82,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Fri Mar 04 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
+- 1.7.5 preview
+
 * Wed Feb 02 2011 Sergio Rubio <srubio@abiquo.com> - 1.7-5
 - fixed build arch
 
