@@ -1,4 +1,4 @@
-%define builtin_release_name PREVIEW 
+%define builtin_release_name RC1
 %define base_release_version 1.7.5
 %define builtin_release_variant Enterprise Edition
 %define builtin_release_version %{base_release_version}
@@ -12,7 +12,7 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.7.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -86,6 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Fri Mar 18 2011 Sergio Rubio <srubio@abiquo.com> - 10:1.7.5-3
+- version bump: 1.7.5 RC1
+
 * Fri Mar 04 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-2
 - added abiquo-release file
 
