@@ -1,4 +1,4 @@
-%define builtin_release_name RC2
+%define builtin_release_name RC3
 %define base_release_version 1.7.5
 %define builtin_release_variant Enterprise Edition
 %define builtin_release_version %{base_release_version}
@@ -12,7 +12,7 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.7.5
-Release: 4%{?dist}
+Release: 5%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -86,6 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Wed Mar 23 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-5
+- bumped release to RC3
+
 * Tue Mar 22 2011 Sergio Rubio <rubiojr@frameos.org> - 1.7.5-4
 - bumped release to RC2
 
