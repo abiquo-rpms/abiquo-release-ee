@@ -10,8 +10,9 @@
 
 Summary: %{product_family} release file
 Name: abiquo-release-ee
+Epoch: 10
 Version: 2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -94,6 +95,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 10:2.0-2
+- added Epoc 10
+
 * Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
 - bumped version to 2.0
 
