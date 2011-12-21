@@ -1,5 +1,5 @@
-%define builtin_release_name HF6
-%define base_release_version 1.8.5
+%define builtin_release_name GA
+%define base_release_version 2.0
 %define builtin_release_variant Enterprise Edition
 %define builtin_release_version %{base_release_version}
 %define real_release_version %{?release_version}%{!?release_version:%{builtin_release_version}}
@@ -10,9 +10,8 @@
 
 Summary: %{product_family} release file
 Name: abiquo-release-ee
-Epoch: 10
-Version: 1.8.5
-Release: 7%{?dist}
+Version: 2.0
+Release: 1%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -95,6 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
+- bumped version to 2.0
+
 * Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 10:1.8.5-7
 - 1.8.5 HF6 update
 
