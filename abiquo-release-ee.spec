@@ -15,7 +15,7 @@ Version: 2.0
 Release: 2%{?dist}
 License: GPL
 Group: System Environment/Base
-Source: %{name}-%{builtin_release_version}.tar.gz
+Source: https://github.com/downloads/abiquo-rpms/abiquo-release-ee/%{name}-%{builtin_release_version}.tar.gz
 Source1: abiquo-release
 #Source2: hotfix.repo
 Source3: motd
