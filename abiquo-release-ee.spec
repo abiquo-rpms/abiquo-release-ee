@@ -1,4 +1,4 @@
-%define builtin_release_name HF6
+%define builtin_release_name HF7
 %define base_release_version 1.8.5
 %define builtin_release_variant Enterprise Edition
 %define builtin_release_version %{base_release_version}
@@ -12,7 +12,7 @@ Summary: %{product_family} release file
 Name: abiquo-release-ee
 Epoch: 10
 Version: 1.8.5
-Release: 7%{?dist}
+Release: 8%{?dist}
 License: GPL
 Group: System Environment/Base
 Source: %{name}-%{builtin_release_version}.tar.gz
@@ -95,6 +95,9 @@ rm -rf $RPM_BUILD_ROOT
 #/var/lib/supportinfo
 
 %changelog
+* Thu Mar 01 2012 Sergio Rubio <srubio@abiquo.com> - 10:1.8.5-8
+- 1.8.5-HF7 update
+
 * Wed Dec 21 2011 Sergio Rubio <srubio@abiquo.com> - 10:1.8.5-7
 - 1.8.5 HF6 update
 
